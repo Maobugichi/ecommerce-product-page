@@ -75,7 +75,7 @@ imgSrc2.forEach((item,index) => {
       prev.classList.remove("border")
       prev2.classList.remove("opacity")
      }
-     sneakImg2.setAttribute("src", `${item.src.slice(50,72)}.jpg`)
+     sneakImg2.src = item.src
      prev = imgDiv2[index]
      prev2 = item
   })
@@ -154,7 +154,7 @@ function plusSlides() {
     const len = `${imgSrc2[current].src.slice(32,72)}.jpg`
     console.log(`lenn: ${len}`)
     console.log(sneakImg2)
-    sneakImg2.setAttribute("src", `/${imgSrc2[current].src.slice(22,72)}.jpg`) 
+    sneakImg2.src = imgSrc2[current].src
 }
 //console.log(current)
 
