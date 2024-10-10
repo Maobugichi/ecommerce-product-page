@@ -150,8 +150,11 @@ const tru = ii.filter(item => {
 function plusSlides() {
   current = current >= imgSrc2.length - 1 ?  0 : current + 1
     console.log(current >= imgSrc2.length)
-    console.log(`cur: ${current} , len: ./${imgSrc2[current].src.slice(50,72)}`)
-    sneakImg2.src = `./${imgSrc2[current].src.slice(50,72)}.jpg`
+    console.log(`cur: ${imgSrc2[current].src}} , len: ./${imgSrc2[current].src.slice(22,72)}`)
+    const len = `${imgSrc2[current].src.slice(32,72)}.jpg`
+    console.log(`lenn: ${len}`)
+    console.log(sneakImg2)
+    sneakImg2.setAttribute("src", `/${imgSrc2[current].src.slice(22,72)}.jpg`) 
 }
 //console.log(current)
 
