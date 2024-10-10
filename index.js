@@ -111,7 +111,7 @@ cartBtn.addEventListener("click", () => {
       empty.style.display = "none"
        itemsDiv.style.display = "flex"
        itemsDiv.style.flexDirection = "column"
-      paraEle.innerHTML =`<p> Fall Limited Edition Sneakers <br>  <span>$125.00 x ${qua} $${125 * parseInt(qua)}.00</span></p>` 
+      paraEle.innerHTML =`<p> Fall Limited Edition Sneakers <br>  <span>$125.00 x ${qua} <strong>$${125 * parseInt(qua)}.00</strong></span></p>` 
       itemCont.appendChild(shoeImg)
       itemCont.appendChild(paraEle)
       itemCont.appendChild(delIcon)
@@ -150,8 +150,8 @@ const tru = ii.filter(item => {
 function plusSlides() {
   current = current >= imgSrc2.length - 1 ?  0 : current + 1
     console.log(current >= imgSrc2.length)
-    console.log(`cur: ${current} , len: ${imgSrc2.length}`)
-    sneakImg2.src = `${imgSrc2[current].src.slice(50,72)}.jpg`
+    console.log(`cur: ${current} , len: ./${imgSrc2[current].src.slice(50,72)}`)
+    sneakImg2.src = `./${imgSrc2[current].src.slice(50,72)}.jpg`
 }
 //console.log(current)
 
