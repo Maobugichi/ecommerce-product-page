@@ -59,7 +59,7 @@ imgSrc.forEach((item,index) => {
     }
 
     console.log(sneakImg)
-    sneakImg.setAttribute("src", `${item.src.slice(50,72)}.jpg`)
+    sneakImg.src =item.src
     prev = imgDiv[index]
     prev2 = item
  })
@@ -165,7 +165,7 @@ function removeSlides() {
      current = current - 1
    }
    console.log(current)
-   sneakImg2.src = `${imgSrc2[current].src.slice(50,72)}.jpg`
+   sneakImg2.src = imgSrc2[current].src
 }
 
 
