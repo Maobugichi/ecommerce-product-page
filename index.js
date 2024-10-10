@@ -46,13 +46,22 @@ let qua;
 
 
 menu.addEventListener("click" ,() => {
-  console.log(side)
-  side.classList.add("showUp")
+  side.classList.remove('exit');
+  side.classList.add('showUp'); 
 })
 
 closeNav.addEventListener("click", () => {
-  side.classList.add("exit")
+ 
+  side.classList.add('exit');
+  setTimeout(() => {
+    side.classList.remove('showUp')
+    side.classList.remove('exit');
+    side.classList.add('hide'); // Add hide class to keep the menu hidden
+  }, 1000);
 })
+
+ // 1000ms = 1s animation duration
+
 sneakImg.addEventListener("click", () => {
  pop.style.display = "block"
 })

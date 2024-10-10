@@ -141,6 +141,16 @@ dialog::backdrop {
   color: hsl(220, 14%, 75%);
  }
 
+ .side {
+  background-color: white;
+  top: 0px;
+  height: 100vh;
+  position: fixed;
+  z-index: 1200;
+  width: 65%;
+  display: none;
+ }
+
 .shoe-img {
  width:40px;
  height:50px; 
@@ -463,9 +473,12 @@ footer {
   position: fixed;
   z-index: 1200;
   width: 65%;
-  display: none;
+  padding: 10px;
  }
 
+ .hide {
+  display: none;
+ }
  .showUp {
   animation: show 1s ease-in forwards;
   display: block;
