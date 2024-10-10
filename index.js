@@ -17,6 +17,9 @@ const pop = document.querySelector(".pop-up")
 const next = document.querySelector(".next-div")
 const previous = document.querySelector(".prev-div")
 const closePop = document.querySelector(".close")
+const side = document.querySelector(".side")
+const menu = document.querySelector(".menu")
+const closeNav = document.querySelector(".close-nav")
 let isShow = false
 let prev = null
 let prev2 = null
@@ -28,7 +31,7 @@ const itemCont = document.createElement("div");
 itemCont.classList.add("items-cont")
 const shoeImg = document.createElement("img")
 shoeImg.classList.add("shoe-img")
-shoeImg.src = `${sneakImg.src.slice(50,80)}`
+shoeImg.src = sneakImg.src
 const paraEle = document.createElement("p")
 paraEle.classList.add("num")
 const delIcon = document.createElement("img");
@@ -42,6 +45,14 @@ let current = 0
 let qua;
 
 
+menu.addEventListener("click" ,() => {
+  console.log(side)
+  side.classList.add("showUp")
+})
+
+closeNav.addEventListener("click", () => {
+  side.classList.add("exit")
+})
 sneakImg.addEventListener("click", () => {
  pop.style.display = "block"
 })
