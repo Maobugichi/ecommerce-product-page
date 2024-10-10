@@ -46,6 +46,10 @@ nav {
  align-items: center;
 }
 
+.menu {
+  display: none;
+}
+
 .nav-list {
  display: flex;
  width: 70%;
@@ -473,8 +477,11 @@ footer {
   position: fixed;
   z-index: 1200;
   width: 65%;
-  padding: 10px;
+  padding: 20px;
  }
+ .menu {
+  display: block;
+}
 
  .hide {
   display: none;
@@ -499,7 +506,7 @@ footer {
  }
 
  .nav-list2 {
-  height: 25%;
+  height: 30%;
   display: flex;
   flex-direction: column;
   list-style: none;
