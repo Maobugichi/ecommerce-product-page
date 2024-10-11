@@ -77,8 +77,6 @@ imgSrc.forEach((item,index) => {
      prev.classList.remove("border")
      prev2.classList.remove("opacity")
     }
-
-    console.log(sneakImg)
     sneakImg.src =item.src
     prev = imgDiv[index]
     prev2 = item
@@ -88,7 +86,6 @@ imgSrc.forEach((item,index) => {
 imgSrc2.forEach((item,index) => {
   item.addEventListener("click", (src) => {
     current = parseInt(item.src.slice(71,72)) - 1
-    console.log(current)
      imgDiv2[index].classList.add("border")
      item.classList.add("opacity")
      if (prev && prev2) {
@@ -108,29 +105,25 @@ function show() {
 }
 
 add.addEventListener("click", () => {
-  quantity.innerText = num
+  quantity.innerText = parseInt(quantity.innerText) + 1
   qua = quantity.innerText
-  num++
+
 })
 
 remove.addEventListener("click" ,() => {
-  console.log(quantity.innerText )
   if (parseInt(quantity.innerText) !== 0) {
     quantity.innerText = parseInt(quantity.innerText) - 1
   }
 })
 
 cartBtn.addEventListener("click", () => {
-    //console.log(qua)
-    isShow = true
-    //console.log(parseInt(quantity.innerText) !== 0)
-    if (qua !== 0 ) {
+    if (qua !== 0 && parseInt(quantity.innerText) !== 0) {
       qua = quantity.innerText
       cartCount.style.display = "grid"
       cartCount.innerText = qua
       empty.style.display = "none"
-       itemsDiv.style.display = "flex"
-       itemsDiv.style.flexDirection = "column"
+      itemsDiv.style.display = "flex"
+      itemsDiv.style.flexDirection = "column"
       paraEle.innerHTML =`<p> Fall Limited Edition Sneakers <br>  <span>$125.00 x ${qua} <strong>$${125 * parseInt(qua)}.00</strong></span></p>` 
       itemCont.appendChild(shoeImg)
       itemCont.appendChild(paraEle)
@@ -138,18 +131,18 @@ cartBtn.addEventListener("click", () => {
       itemsDiv.appendChild(itemCont)
       itemsDiv.appendChild(btn)
       cc.appendChild(itemsDiv)
+    } else {
+      empty.style.display = "block"
+      itemsDiv.style.display = "none"
     }
-    
+     
 })
 
 delIcon.addEventListener("click" , () => {
- console.log(`qua: ${qua}`)
- console.log(parseInt(quantity.innerText))
  if (qua > 1) {
    qua = qua - 1
    paraEle.innerHTML = `<p> Fall Limited Edition Sneakers <br>  <span>$125.00 x ${qua} $${125 * parseInt(qua)}.00</span></p>` 
-   
-      cartCount.innerText = qua
+   cartCount.innerText = qua
  }  else {
    itemsDiv.style.display = "none"
    empty.style.display = "block"
@@ -187,20 +180,3 @@ function removeSlides() {
    console.log(current)
    sneakImg2.src = imgSrc2[current].src
 }
-
-
-
-/*let currentPrev;
-
-function prevSlides() {
-  let ii =  Array.from(imgSrc2)
- const tru = ii.filter(item => {
-  return item.src.slice(50,72) === sneakImg.src.slice(50,72)
-  })
-  console.log(tru[0])
-  if (currentPrev < imgSrc2.length) {
-    console.log(`src: ${imgSrc2.length} current: ${currentPrev}`)
-    sneakImg.setAttribute("src", `${imgSrc2[currentPrev].src.slice(50,72)}.jpg`)
-  } 
-  currentPrev = currentPrev - 1
-}*/

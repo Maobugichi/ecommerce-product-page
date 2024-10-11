@@ -62,7 +62,8 @@ nav {
 .nav-list li {
  height: 65%;
  cursor: pointer;
- 
+ color: hsl(219, 9%, 45%);
+ transition: color ease-in 0.2s;
 }
 
 .right-nav {
@@ -95,11 +96,12 @@ nav {
 
 li:hover {
  border-bottom: 2px solid hsl(26, 100%, 55%);
+ color: #1D2026;
 }
 
 dialog {
  background-color: hsl(0, 0%, 100%);
- height: 220px;
+ height: 230px;
  width: 330px;
  position: absolute;
  top: 80px;
@@ -112,7 +114,7 @@ dialog {
 dialog h2 {
  height: 50px;
  padding: 15px;
-
+ font-size: 20px;
  border-bottom: 1px solid  hsl(220, 14%, 75%);
 }
 dialog::backdrop {
@@ -123,12 +125,11 @@ dialog::backdrop {
   background-color: white;
   width: 95%;
   margin: auto;
-  height: 140px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   padding: 10px;
   justify-content: space-between;
- 
   margin-top: 15px;
  }
  
@@ -185,31 +186,42 @@ dialog::backdrop {
  border: 1.5px solid hsl(26, 100%, 55%);
  border-radius: 50%;
 }
+
+.cart-img {
+  fill: hsl(219, 9%, 45%)
+}
+
+.cart-img:hover {
+  fill: #1D2026;
+}
 main {
  width: 85%;
  margin: 105px auto;
-
+ height: 100vh;
 }
 
 section {
  display: flex;
  justify-content: space-between;
+ height: 100%;
 }
 
 .left {
- width: 50%;
+ width: 45%;
  display: flex;
  flex-direction: column;
  gap: 20px;
+ height: 100%;
 }
 
 .sneak-div {
  width: 90%;
-
+ height: 80%;
 }
 
 .sneak-div img {
  width: 100%;
+ height: 100%;
  border-radius: 15px;
 }
 
@@ -229,7 +241,7 @@ section {
 }
 
 .opacity {
- opacity: 0.5;
+ opacity: 0.3;
 }
 .img-div-content, .img-div-content2 {
  width: 21%;
@@ -251,11 +263,12 @@ section {
 .right {
  display: flex;
  width: 47%;
+ 
 }
 
 .right-content {
- margin-top: 30px;
- height: 65%;
+ margin-top: 50px;
+ height: 70%;
  display: flex;
  flex-direction: column;
  justify-content: space-between;
@@ -263,8 +276,10 @@ section {
 }
 
 .company-name {
- font-size: 15px;
-}
+  font-size: 15px;
+  color:  hsl(219, 9%, 45%);
+  margin-bottom: 15px;
+ }
 
 h1 {
  font-size: 45px;
@@ -288,6 +303,7 @@ h1 {
  align-items: center;
  gap: 10px;
  font-size: 25px;
+ font-weight: 700;
 }
 
 .discount-span {
@@ -296,7 +312,7 @@ h1 {
  background-color: black;
  border-radius: 5px;
  color: white;
- font-size: 12px;
+ font-size: 14px;
  display: grid;
  place-items: center;
 }
@@ -313,7 +329,7 @@ h1 {
  justify-content: center;
  gap: 20px;
  background-color: hsl(223, 64%, 98%);
- height: 40px;
+ height: 50px;
  border-radius: 8px;
 }
 
@@ -336,8 +352,9 @@ button {
  width: 55%;
  background-color:  hsl(26, 100%, 55%);
  border: none;
- border-radius: 10px;
+ border-radius: 8px;
  color: hsl(220, 13%, 13%);
+ height: 50px;
  display: flex;
  align-items: center;
  justify-content: center;
@@ -346,7 +363,7 @@ button {
 }
 
 button:hover {
- opacity: 0.7;
+ opacity: 0.8;
 
 }
 
@@ -465,7 +482,7 @@ footer {
 @media (min-width:320px) and (max-width:600px) {
 .container {
   width: 100%;
-  height: 150vh;
+  height: 135vh;
   position: relative;
   background-color: white;
  }
